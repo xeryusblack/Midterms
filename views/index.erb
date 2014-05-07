@@ -1,0 +1,25 @@
+<DOCTYPE html>
+<html>
+	<body>
+		<header>
+			Expenses
+		</header>
+
+		<div>
+			<ul>
+  				<% @expenses.each_with_index do |expense, index| %>
+  				<li>
+  					<%= index %> <%= expense.details %>
+  					<a href="/show/ <%= index %>">Show Details</a>
+  				</li>
+  				<% end %>
+			</ul>
+			<label>Total Amount:</label>
+			<% @expenses.each_with_index do |expense, index| %>
+			<%= expense.amount %>
+			<% end %>
+		</div>
+		</br></br>
+		<a href="/new">New Expense</a>
+	</body>
+</html>

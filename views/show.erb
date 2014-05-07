@@ -1,0 +1,21 @@
+<DOCTYPE html>
+<html>
+	<body>
+		<header>
+			Expenses
+		</header>
+
+		<div>
+			<ul>
+  				<% @expenses.each do |expense, index| %>
+  				<li>
+  					<label>Item Details: </label>
+					<%= expense.details %>
+  				</li>
+  				<% end %>
+			</ul>
+		</div>
+		</br></br>
+		<a href="/">Back</a>
+	</body>
+</html>
